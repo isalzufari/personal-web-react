@@ -77,7 +77,7 @@ const Blog = () => {
                     </div>
                 </div> 
 
-                <h1 id="head" className="center-align about-heading scrollspy">BLOG</h1>
+                <h1 id="head" className="center-align about-heading">BLOG</h1>
 
                 <ul id="tabs-swipe-demo" className="tabs">
                     <li className="tab s3"><a onClick={() => getBlog('')} href="#/">Semua</a></li>

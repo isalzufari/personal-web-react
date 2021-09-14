@@ -16,11 +16,8 @@ p {
   line-height: 48px;
 }
 
-.navbar .brand-logo {
-  color: rgba(0,0,0,0.87);
-  font-weight: 700;
-  letter-spacing: 1px;
-  cursor: pointer;
+.navbar .brand-logo img {
+  height: 64px;
 }
 
 .navbar .sidenav .user-view .name {
@@ -87,6 +84,11 @@ footer li i.material-icons {
 
 /* Page Contact */
 .contact h5 {
+  padding: 0px 0px 200px 0px;
+}
+
+/* Page NotFound  */
+.not-found h1 {
   padding: 0px 0px 200px 0px;
 }
 
