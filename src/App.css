@@ -1,0 +1,102 @@
+/* Component Navbar */
+
+.navbar .topnav a {
+  color: rgba(0,0,0,0.87);
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  line-height: 48px;
+}
+
+.navbar .brand-logo {
+  color: rgba(0,0,0,0.87);
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.navbar .sidenav .user-view .name {
+  padding-bottom: 6px;
+}
+
+/* Component Footer */
+footer a, h5 {
+  color: rgba(0,0,0,0.87);
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  height: 48px;
+  line-height: 48px;
+}
+
+footer li i.material-icons {
+  float: left;
+  height: 48px;
+  line-height: 48px;
+  margin: 0 32px 0 0;
+  width: 24px;
+  color: rgba(0,0,0,0.54);
+}
+
+/* All Pages */
+.about-heading {
+  color:#353535;
+  font-size: 43px;
+  font-weight: 800;
+  letter-spacing: 5px;
+}
+
+/* Page Home */
+.home {
+  padding: 100px 100px 100px 100px;
+}
+
+/* Page Blog */
+.blog #postBlog .card-image img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  padding: 0;
+}
+
+/* Page Film */
+.film #contentFilm .badge {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+}
+
+.film #contentFilm .badge i {
+  margin: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .home {
+    padding: 100px 10px 100px 10px;
+  }
+
+  .about-heading {
+    color:#353535;
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .blog #postBlog .card {
+    height:380px;
+  }
+
+  .blog .youtube-heading {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .home {
+    padding: 100px 30px 100px 30px;
+  }
+}
