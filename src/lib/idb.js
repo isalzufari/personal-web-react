@@ -24,13 +24,13 @@ const saveFavArticle = (article) => {
   })
   .then(() => {
     M.toast({
-        html: `Post ${article.title} Saved <a class="btn-flat toast-action" onclick="getSaved()">Show</a>`,
+        html: `Post ${article.title} Saved`, 
     });
   })
   .catch((result) => {
       console.log(result);
     M.toast({
-        html: `Post ${article.title} Not Saves ${result} <a class="btn-flat toast-action" onclick="getSaved()">Show</a>`,
+        html: `Post ${article.title} Not Saved ${result}`,
     });
   });
 }
@@ -45,7 +45,7 @@ const deleteFavArticle = (article) => {
   })
   .then(() => {
     M.toast({
-        html: `Post ${article.title} delete <a class="btn-flat toast-action" onclick="getSaved()">Show</a>`,
+        html: `Post ${article.title} delete`,
     });
   })
   .catch((err) => {

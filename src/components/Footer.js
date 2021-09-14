@@ -16,18 +16,21 @@ const Footer = () => {
                                         Home
                                     </li>
                                 </Link>
+
                                 <Link to ="/blog">
                                     <li>
                                         <i className="material-icons">book</i> 
                                         Blog
                                     </li>
                                 </Link>
-                                <Link to="/about">
+
+                                <Link to="/film">
                                     <li>
-                                        <i className="material-icons">person</i> 
-                                        About
+                                        <i className="material-icons">tv</i>
+                                        Film
                                     </li>
                                 </Link>
+                                
                                 <Link to="/contact">
                                     <li>
                                         <i className="material-icons">contacts</i> 
@@ -40,18 +43,8 @@ const Footer = () => {
                             <h5>Social</h5>
                             <div className="row">
                                 <div className="col">
-                                    <a href="//fb.com/isalzufari" target="_blank" rel="noreferrer">
-                                        <img width="40px" src="dist/svg/facebook.svg" alt="facebook"/>
-                                    </a>
-                                </div>
-                                <div className="col">
                                     <a href="//instagram.com/isalzufari" target="_blank" rel="noreferrer">
                                         <img width="40px" src="dist/svg/instagram.svg" alt="instagram"/>
-                                    </a>
-                                </div>
-                                <div className="col">
-                                    <a href="//www.tiktok.com/@isalzufari" target="_blank" rel="noreferrer">
-                                        <img width="40px" src="dist/svg/tiktok.svg" alt="tiktok"/>
                                     </a>
                                 </div>
                                 <div className="col">

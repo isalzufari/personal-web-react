@@ -2,6 +2,11 @@
   background-color: #53bd84 !important;
 }
 
+p {
+  font-weight: 450; 
+  color:#757575;
+}
+
 /* Component Navbar */
 .navbar .topnav a {
   color: rgba(0,0,0,0.87);
@@ -47,6 +52,8 @@ footer li i.material-icons {
   font-weight: 800;
   letter-spacing: 5px;
 }
+
+
 
 /* Page Home */
 .home {

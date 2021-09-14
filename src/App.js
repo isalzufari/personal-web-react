@@ -9,6 +9,7 @@ import NotFound from './pages/NotFound';
 import Blog from './pages/Blog';
 import Film from './pages/Film';
 import Contact from './pages/Contact';
+import About from './pages/About';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <div className="container">
         <Switch>
           <Route exact path='/' component={Home} />
+          <Route exact path='/about' component={About} />
           <Route exact path='/blog' component={Blog} />
           <Route exact path='/film' component={Film} />
           <Route exact path='/contact' component={Contact} />

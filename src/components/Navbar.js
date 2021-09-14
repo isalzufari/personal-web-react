@@ -60,16 +60,22 @@ const Navbar = () => {
                         <li>
                           <div className="user-view">
                             <div className="background">
-                              <img width="100%" src="dist/img/back.jpg" alt="logo-personal"/>
+                              <img width="100%" src="dist/img/background-sidenav.jpg" alt="background-logo-personal"/>
                             </div>
-                            <img className="circle" src="dist/img/circleMe.png" alt="logo-personal"/>
+                            <img className="circle" src="dist/img/circle-me.png" alt="logo-personal"/>
                             <span className="white-text name">Si ISAL</span>
                           </div>
                         </li>
                         <li>
                           <Link to="/" className="waves-effect">
-                            <i className="large material-icons">person</i>
+                            <i className="large material-icons">home</i>
                               Home
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/about">
+                            <i className="material-icons">person</i> 
+                            About
                           </Link>
                         </li>
                         <li>
