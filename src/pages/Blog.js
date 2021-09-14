@@ -25,6 +25,8 @@ const Blog = () => {
     }
 
     useEffect(() => {
+        document.title = 'Blog - isalzufari';
+
         if (load) {
             console.log('Fetching');
             const blog_url = `https://blogger.googleapis.com/v3/blogs/${env.BLOG_ID}/posts?fetchBodies=false&fetchImages=true&key=${env.BLOG_KEY}`;

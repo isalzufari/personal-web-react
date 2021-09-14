@@ -13,6 +13,8 @@ const Film = () => {
     const [filmItems, setFilmItems] = useState();
 
     useEffect(() => {
+        document.title = 'Film - isalzufari';
+
         const mdb_url = `https://api.themoviedb.org/3/account/{account_id}/rated/`;
         const mdb_key = `?api_key=${env.KEY_MDB_URL}&language=en-US&session_id=6033481a172d67a6d148caf06b57babd43213ffc&sort_by=created_at.asc&page=1`;
         
