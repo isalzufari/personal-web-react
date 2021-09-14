@@ -36,7 +36,7 @@ const Films = (films) => {
                             <div className='col s12 m9'>
                                 <div className='card-stacked'>
                                     <div className='card-content'>
-                                        <h5>{film.name || film.title}<span className='badge red white-text'><i>{film.vote_average}</i></span></h5>
+                                        <h5>{film.name || film.title}<span className='badge maincolor white-text'><i>{film.vote_average}</i></span></h5>
                                         <p className='truncate'>{film.overview}</p>
                                     <br/>
                                         <span>Rilis : {formatted_date(film.first_air_date)}</span>

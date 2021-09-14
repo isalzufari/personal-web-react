@@ -60,11 +60,6 @@ const Footer = () => {
                                     </a>
                                 </div>
                             </div>
-                            <h5>Contact</h5>
-                            <ul>
-                                <li><a href="#contact"><i className="material-icons">email</i> isalzufari@gmail.com</a></li>
-                                <li><a href="#blogs"><i className="material-icons">location_on</i> Indonesia</a></li>
-                            </ul>
                         </div>
                     </div>
                 </div>

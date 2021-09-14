@@ -1,7 +1,8 @@
 import React from 'react';
-import { saveFavArticle, deleteFavArticle, checkFavorite } from '../lib/idb'
+import { saveFavArticle, deleteFavArticle, checkFavorite } from '../lib/idb';
 
 const Articles = ({articles, getLabelArticle}) => {
+
     const formatted_date = (published) => {
         const months = ['Jan', 'Feb', 'Mar','Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
         const current_datetime = new Date(published);
@@ -52,7 +53,13 @@ const Articles = ({articles, getLabelArticle}) => {
     }
 
     console.log(articles)
-    if (articles.length === 0) return 'Loading...';
+    if (articles.length === 0) return (
+        <div id="loader" className="center-align">
+            <div className="progress">
+                <div className="indeterminate"></div>
+            </div>
+        </div>
+    );
 
     return (
         <>
@@ -63,10 +70,10 @@ const Articles = ({articles, getLabelArticle}) => {
                             <a href={article.url} target='_blank' rel='noreferrer'>
                                 <img src={thumbImages(article.images)} alt={article.title} />
                             </a>
-                            <button onLoad={checkFav(article.id)} className='btn-floating halfway-fab waves-effect waves-light red' onClick={() => favPost(article)} id={`fav${article.id}`}>
+                            <button onLoad={checkFav(article.id)} className='btn-floating halfway-fab waves-effect waves-light maincolor' onClick={() => favPost(article)} id={`fav${article.id}`}>
                                 <i className='material-icons'>bookmark_border</i>
                             </button>
-                            <button onLoad={checkFav(article.id)} className='btn-floating halfway-fab waves-effect waves-light red' onClick={() => delPost(article)} id={`del${article.id}`}>
+                            <button onLoad={checkFav(article.id)} className='btn-floating halfway-fab waves-effect waves-light maincolor' onClick={() => delPost(article)} id={`del${article.id}`}>
                                 <i className='material-icons'>bookmark</i>
                             </button>
                         </div>

@@ -5,8 +5,6 @@ import M from 'materialize-css';
 import { getAllFavTeams } from '../lib/idb';
 
 const Blog = () => {
-     
-    const [error, setError] = useState(null);
     const [articlesItems, setarticlesItems] = useState([]);
     const [pageToken, setPageToken] = useState('');
     const [labels, setLabels] = useState('');
@@ -22,6 +20,7 @@ const Blog = () => {
         getAllFavTeams().then((articles) => {
             console.log(articles);
             setarticlesItems(articles)
+            setArticlesEnd(true);
         })
     }
 
@@ -45,8 +44,8 @@ const Blog = () => {
                 }
               },
               (error) => {
+                console.log(error)
                 setLoad(false);
-                setError(error);
               }
             )  
         }
@@ -87,19 +86,13 @@ const Blog = () => {
                     <li className="tab s3"><a onClick={() => getSaved()} href="#/">Saved</a></li>
                 </ul>
 
-                <div id="loader" className="center-align" style={{ display: load ? 'block' : 'none' }}>
-                    <div className="progress">
-                        <div className="indeterminate"></div>
-                    </div>
-                </div>
-
                 <div className="row" id="postBlog" >
                     <Articles articles={articlesItems} getLabelArticle={getBlog} />
                 </div>
 
                 <div className="row" id="changePage">
                     <div className="col s12 center-align">
-                        <button id="nextPage" onClick={() => nextLoadMore()} className="btn-floating btn-large waves-effect waves-light red" disabled={articlesEnd}>
+                        <button id="nextPage" onClick={() => nextLoadMore()} className="btn-floating btn-large waves-effect waves-light maincolor" disabled={articlesEnd}>
                             <i className="material-icons">keyboard_arrow_down</i>
                         </button>
                     </div>

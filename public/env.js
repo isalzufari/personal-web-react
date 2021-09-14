@@ -1,5 +1,5 @@
 window.env = {
-  "BLOG_KEY": "AIzaSyDseH2DsJhfAGWuP40r2z4DHsppVWtEMZg",
+  "BLOG_KEY": "AIzaSyBzjHXKRoEa9jbZexgLMWM-bYvMyjye_98",
   "BLOG_ID": "3334448623930804077",
   "KEY_MDB_URL": "f8202448cdac34a2663659e9ab67564f"
 };

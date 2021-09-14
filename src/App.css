@@ -1,5 +1,8 @@
-/* Component Navbar */
+.maincolor {
+  background-color: #53bd84 !important;
+}
 
+/* Component Navbar */
 .navbar .topnav a {
   color: rgba(0,0,0,0.87);
   font-size: 14px;
@@ -24,7 +27,7 @@ footer a, h5 {
   color: rgba(0,0,0,0.87);
   font-size: 14px !important;
   font-weight: 500 !important;
-  height: 48px;
+  height: 38px;
   line-height: 48px;
 }
 
@@ -58,6 +61,10 @@ footer li i.material-icons {
   padding: 0;
 }
 
+.blog .progress .indeterminate {
+  background-color: #53bd84 !important;
+}
+
 /* Page Film */
 .film #contentFilm .badge {
   border-radius: 50%;
@@ -69,6 +76,11 @@ footer li i.material-icons {
 
 .film #contentFilm .badge i {
   margin: auto;
+}
+
+/* Page Contact */
+.contact h5 {
+  padding: 0px 0px 200px 0px;
 }
 
 @media only screen and (max-width: 600px) {
