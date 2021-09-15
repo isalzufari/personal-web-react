@@ -36,13 +36,16 @@ const Blog = () => {
             .then(
               (result) => {
                 setLoad(false);
-                setarticlesItems([...articlesItems, ...result.items]);
-                if('nextPageToken' in result){
-                    setPageToken(`&pageToken=${result.nextPageToken}`);
-                    setArticlesEnd(false);
-                } else {
-                    setPageToken('');
-                    setArticlesEnd(true);
+                console.log(result);
+                if (result.items) {
+                    setarticlesItems([...articlesItems, ...result.items]);
+                    if('nextPageToken' in result){
+                        setPageToken(`&pageToken=${result.nextPageToken}`);
+                        setArticlesEnd(false);
+                    } else {
+                        setPageToken('');
+                        setArticlesEnd(true);
+                    }
                 }
               },
               (error) => {
@@ -55,6 +58,7 @@ const Blog = () => {
     }, [labels, load]); 
 
     const getBlog = (label) => {
+        console.log(label);
         setPageToken('');
         setarticlesItems([]);
         setLoad(true);
@@ -89,7 +93,7 @@ const Blog = () => {
                 </ul>
 
                 <div className="row" id="postBlog" >
-                    <Articles articles={articlesItems} getLabelArticle={getBlog} />
+                    <Articles articles={articlesItems} getLabelArticle={getBlog} load={load}/>
                 </div>
 
                 <div className="row" id="changePage">

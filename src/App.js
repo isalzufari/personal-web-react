@@ -11,8 +11,24 @@ import Film from './pages/Film';
 import Contact from './pages/Contact';
 import About from './pages/About';
 
-function App() {
+import { initializeApp } from 'firebase/app';
+import { getAnalytics } from 'firebase/analytics';
 
+function App() {
+  const firebaseConfig = {
+    apiKey: "AIzaSyCuVIRxvlwXfT2E040CLIVHnQRReMVe300",
+    authDomain: "dev-isalzufari.firebaseapp.com",
+    databaseURL: "https://dev-isalzufari.firebaseio.com",
+    projectId: "dev-isalzufari",
+    storageBucket: "dev-isalzufari.appspot.com",
+    messagingSenderId: "460839476418",
+    appId: "1:460839476418:web:5368ff19295a4fba8baf5b",
+    measurementId: "G-F0DB4LHYL6"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  getAnalytics(app);
+  
   return (
     <Router>
       <Navbar />

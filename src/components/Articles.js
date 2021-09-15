@@ -1,7 +1,7 @@
 import React from 'react';
 import { saveFavArticle, deleteFavArticle, checkFavorite } from '../lib/idb';
 
-const Articles = ({articles, getLabelArticle}) => {
+const Articles = ({articles, getLabelArticle, load}) => {
 
     const formatted_date = (published) => {
         const months = ['Jan', 'Feb', 'Mar','Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -53,12 +53,18 @@ const Articles = ({articles, getLabelArticle}) => {
     }
 
     console.log(articles)
+    console.log(load);
     if (articles.length === 0) return (
-        <div id="loader" className="center-align">
+        <>
+        <div id="loader" className="center-align" style={{ display: load ? 'block' : 'none' }}>
             <div className="progress">
                 <div className="indeterminate"></div>
             </div>
         </div>
+        <div className="center-align" style={{ display: load ? 'none' : 'block' }}>
+            <h5>Tidak Ditemukan</h5>
+        </div>
+        </>
     );
 
     return (
@@ -78,7 +84,7 @@ const Articles = ({articles, getLabelArticle}) => {
                             </button>
                         </div>
                         <div className="card-content">
-                            <p className="truncate">{article.title}</p>
+                            <h5 className="truncate" style={{ margin: '0' }}>{article.title}</h5>
                             <p>{formatted_date(article.published)}</p>
                             <div className="right-align">
                                 <a href="#/" onClick={() => getLabelArticle(article.labels)}>

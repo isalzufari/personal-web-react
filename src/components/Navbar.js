@@ -26,8 +26,8 @@ const Navbar = () => {
           <div className="navbar">
               <nav className="grey lighten-5" role="navigation">
                   <div className="nav-wrapper container">
-                      <span className="brand-logo" id="logo-container">
-                        <img src="./logo192.png" alt="personal-brand--isalwin8"/> 
+                      <span className="brand-logo black-text" id="logo-container">
+                        <i className="material-icons">cloud</i>
                       </span>
                       <a href="/#" className="sidenav-trigger black-text" data-target="nav-mobile">
                         <i className="material-icons">menu</i>
